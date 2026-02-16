@@ -86,40 +86,76 @@ header {
   background-color: var(--salmon);
 }
 
-/* Catálogo en Cuadrícula */
-.section-title {
-  text-align: center;
-  margin: 50px 0;
-  font-size: 2rem;
+/* --- NUEVA CUADRÍCULA DE PRODUCTOS DINÁMICOS --- */
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 40px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.category-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
-  padding: 0 5%;
+/* --- TARJETA DE PRODUCTO PREMIUM --- */
+.product-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(255, 193, 77, 0.2); /* Usando tu color --oro */
+    display: flex;
+    flex-direction: column;
 }
 
-.category-card {
-  background: white;
-  padding: 10px;
-  border-radius: 15px;
-  text-align: center;
-  cursor: pointer;
-  transition: 0.3s;
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(245, 155, 145, 0.2); /* Usando tu color --salmon */
 }
 
-.category-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+/* --- SOLUCIÓN AL TAMAÑO GIGANTE --- */
+.product-card img {
+    width: 100%;
+    height: 300px; /* Altura fija para uniformidad */
+    object-fit: cover; /* Recorta la imagen para que encaje perfecto */
+    border-bottom: 1px solid #f0f0f0;
 }
 
-.category-card img {
-  width: 100%;
-  border-radius: 10px;
-  margin-bottom: 10px;
+/* --- DETALLES DEL PRODUCTO --- */
+.product-info {
+    padding: 20px;
+    text-align: center;
+    flex-grow: 1;
 }
 
+.product-info h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: var(--texto);
+}
+
+.categoria {
+    font-size: 0.8rem;
+    color: var(--salmon);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.precio {
+    display: block;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+/* --- BOTÓN DENTRO DE LA TARJETA --- */
+.product-card .btn-primary {
+    width: 100%;
+    padding: 10px;
+    font-size: 0.9rem;
+    background-color: var(--verde); /* Usando tu color --verde */
+}
 /* WhatsApp Flotante */
 .whatsapp-float {
   position: fixed;
@@ -165,3 +201,4 @@ header {
   font-style: italic;
   margin-top: 30px;
 }
+
