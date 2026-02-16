@@ -1,16 +1,7 @@
-// 1. FUNCIÓN DE WHATSAPP MEJORADA
-// Ahora recibe el nombre del producto y la URL de la imagen
-function irAWhatsApp(producto, imagenUrl) {
-    const telefono = "584248549244";
-    
-    // Construimos el mensaje con el link de la foto incluido
-    const mensaje = `¡Hola! Estoy interesada en este producto:
-    
-⭐ *${producto}*
-🖼️ Ver referencia: ${imagenUrl}
-
-¿Podrías darme más información?`;
-
+// 1. FUNCIÓN DE WHATSAPP 
+function irAWhatsApp(producto) {
+    const telefono = "584248549244"; 
+    const mensaje = `Hola! Estoy interesada en el producto: ${producto}`;
     const url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
     window.open(url, '_blank');
 }
@@ -23,6 +14,7 @@ async function cargarProductos() {
     contenedor.innerHTML = '<p style="text-align:center;">Cargando catálogo exclusivo...</p>';
 
     try {
+        // Asegúrate de que el link de tu repo tenga la 'c' en jesusortizc18
         const response = await fetch('https://api.github.com/repos/jesusortizc18-coder/renacer-web/contents/data/productos');
         const archivos = await response.json();
 
@@ -32,7 +24,7 @@ async function cargarProductos() {
             const resProducto = await fetch(archivo.download_url);
             const producto = await resProducto.json();
 
-            // INSERTAMOS LOS DATOS. Nota el cambio en el 'onclick' del botón:
+            // Dibujamos la tarjeta volviendo al 'onclick' original de un solo dato
             contenedor.innerHTML += `
                 <div class="product-card">
                     <img src="${producto.image}" alt="${producto.title}">
@@ -40,7 +32,7 @@ async function cargarProductos() {
                         <h3>${producto.title}</h3>
                         <p class="categoria">${producto.categoria}</p>
                         <p class="precio">${producto.precio || ''}</p>
-                        <button class="btn-primary" onclick="irAWhatsApp('${producto.title}', '${producto.image}')">
+                        <button class="btn-primary" onclick="irAWhatsApp('${producto.title}')">
                             Consultar disponibilidad
                         </button>
                     </div>
