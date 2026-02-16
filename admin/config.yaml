@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: tu-usuario-github/14Feb # Reemplaza con tu usuario y el nombre del repo
+  repo: jesusortizc18-coder/renacer-web 
   branch: main
 
 media_folder: "images/uploads" # Donde se guardarán las fotos que ella suba
@@ -27,3 +27,4 @@ collections:
           widget: "string",
           required: false,
         }
+
