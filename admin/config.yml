@@ -12,6 +12,8 @@ collections:
     folder: "data/productos" # Aquí se guardará la info de cada pieza
     create: true
     slug: "{{slug}}"
+    extension: "json"
+    format: "json"
     fields:
       - { label: "Nombre de la Pieza", name: "title", widget: "string" }
       - {
@@ -27,5 +29,6 @@ collections:
           widget: "string",
           required: false,
         }
+
 
 
