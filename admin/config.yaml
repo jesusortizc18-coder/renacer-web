@@ -1,0 +1,29 @@
+backend:
+  name: github
+  repo: tu-usuario-github/14Feb # Reemplaza con tu usuario y el nombre del repo
+  branch: main
+
+media_folder: "images/uploads" # Donde se guardarán las fotos que ella suba
+public_folder: "/images/uploads"
+
+collections:
+  - name: "productos"
+    label: "Catálogo de Productos"
+    folder: "data/productos" # Aquí se guardará la info de cada pieza
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Nombre de la Pieza", name: "title", widget: "string" }
+      - {
+          label: "Categoría",
+          name: "categoria",
+          widget: "select",
+          options: ["Pulseras", "Collares", "Zarcillos", "Anillos"],
+        }
+      - { label: "Imagen", name: "image", widget: "image" }
+      - {
+          label: "Precio (Opcional)",
+          name: "precio",
+          widget: "string",
+          required: false,
+        }

@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Luce Renacer | Accesorios Hechos a Mano</title>
+    <link rel="stylesheet" href="stylerenacer.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <img src="imagen renacer.jpg" alt="Luce Renacer Logo" />
+      </div>
+      <ul class="nav-links">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#catalogo">Catálogo</a></li>
+      </ul>
+    </nav>
+
+    <header id="inicio">
+      <div class="hero-content">
+        <h1>Exalta tu belleza</h1>
+        <p>Piezas únicas, exclusivas y personalizadas hechas a mano para ti.</p>
+        <a href="#catalogo" class="btn-primary">Ver Catálogo</a>
+      </div>
+    </header>
+
+    <section id="esencia" class="esencia-section">
+      <div class="esencia-container">
+        <h2 class="section-title">Nuestra Esencia</h2>
+        <div class="esencia-content">
+          <p>
+            En <strong>Luce Renacer</strong>, creemos que cada mujer posee una
+            luz única que merece ser celebrada. No solo diseñamos accesorios;
+            creamos piezas exclusivas hechas totalmente a mano, pensando en
+            exaltar tu belleza natural en cada detalle.
+          </p>
+          <p>
+            Nuestra marca nace de la pasión por lo auténtico. Cada color que nos
+            representa tiene un propósito: la ternura de nuestra estética, el
+            verde del renacer constante y la elegancia de lo hecho con amor.
+          </p>
+          <p class="highlight-text">Piezas únicas para una mujer única.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="catalogo">
+      <h2 class="section-title">Nuestras Colecciones</h2>
+      <div class="category-grid">
+        <div class="category-card" onclick="irAWhatsApp('Pulseras')">
+          <img src="pulseras-thumb.jpg" alt="Pulseras" />
+          <h3>Pulseras</h3>
+        </div>
+        <div class="category-card" onclick="irAWhatsApp('Collares')">
+          <img src="collares-thumb.jpg" alt="Collares" />
+          <h3>Collares</h3>
+        </div>
+        <div class="category-card" onclick="irAWhatsApp('Zarcillos')">
+          <img src="zarcillos-thumb.jpg" alt="Zarcillos" />
+          <h3>Zarcillos</h3>
+        </div>
+        <div class="category-card" onclick="irAWhatsApp('Anillos')">
+          <img src="anillos-thumb.jpg" alt="Anillos" />
+          <h3>Anillos</h3>
+        </div>
+      </div>
+    </section>
+
+    <a href="https://wa.me/584248549244" class="whatsapp-float" target="_blank">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+        alt="WhatsApp"
+      />
+    </a>
+
+    <script src="renacer.js"></script>
+  </body>
+</html>
