@@ -1,6 +1,6 @@
 backend:
-  name: github
-  repo: jesusortizc18-coder/renacer-web 
+  name: git-gateway
+  repo: jesusortizc18-coder/renacer-web
   branch: main
 
 media_folder: "images/uploads" # Donde se guardarán las fotos que ella suba
@@ -27,4 +27,5 @@ collections:
           widget: "string",
           required: false,
         }
+
 
